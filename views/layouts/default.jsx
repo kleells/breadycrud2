@@ -4,18 +4,17 @@ const React = require('react')
 // Write a function called Default to hold an HTML boilerplate w/
 // one argument (html)
 
-function Default (html) {
+function Default(html) {
     return (
-        <html lang="en">
+        <html>
             <head>
-                <title>Default</title>
+                <title>{html.title || 'Default'}</title>
             </head>
             <body>
                 <h1>HTML Rendered!</h1>
-                <div className='container'></div>
-                {/* the the code where to load the HTML children for the different views
-                the {} will tell React/JSX to stop, evaluate and render contents */}
-                {html.children}
+                    {/* the code to tell where to load the HTML children for the different views
+                    the {} will tell React/JSX to stop, evaluate and render contents */}    
+                    {html.children}
             </body>
         </html>
     )
