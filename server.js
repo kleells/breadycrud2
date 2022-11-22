@@ -6,12 +6,19 @@ require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
 
-// ROUTES
+// MIDDLEWARE (should be installed above routes)
+// Here we are setting up which view engine should be used and
+// requiring JSX so we can utilize it to build our views
+app.set('views', __dirname + '/views')
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
+
+// ROUTES (landing page)
 app.get('/', (req, res) => {
   res.send('Welcome to an Awesome App about Breads!')
 })
 
-// Breads READ ROUTE
+// Breads READ ROUTE (grabs breads_controller INDEX page)
 const breadsController = require('./controllers/breads_controllers.js')
 app.use('/breads', breadsController)
 
