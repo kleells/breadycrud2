@@ -2,7 +2,7 @@ const express = require('express')
 const breads = express.Router()
 const Bread = require('../models/bread.js')
 
-// INDEX (grabs bread.js array to be used by server.js)
+// INDEX (grabs models/bread.js array to be used by server.js)
 breads.get('/', (req, res) => {
     res.render('Index', 
         // update res.render() to pass data: 1st arg is file inside of views folder (Index)
@@ -15,7 +15,7 @@ breads.get('/', (req, res) => {
     //res.send(Bread)
 })
 
-// SHOW (displays individual breads based on array index)
+// SHOW (displays individual breads based on array index in models/breads.js)
 breads.get('/:arrayIndex', (req, res) => {
     res.send(Bread[req.params.arrayIndex])
 })
