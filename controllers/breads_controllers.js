@@ -6,7 +6,7 @@ const Bread = require('../models/bread.js')
 breads.get('/', (req, res) => {
     res.render('Index', 
         // update res.render() to pass data: 1st arg is file inside of views folder (Index)
-        // 2nd is optional and an object. Here is to breads: Bread
+        // 2nd is optional and an object. Here it is breads: Bread
         {
             breads: Bread,
             title: 'Index Page'

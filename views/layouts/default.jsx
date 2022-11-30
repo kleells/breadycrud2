@@ -4,6 +4,11 @@ const React = require('react')
 // Write a function called Default to hold an HTML boilerplate w/
 // one argument (html)
 
+// this boilerplate will be viewed with the index.jsx boilerplate 
+// in the /breads view with a list of breads
+// from models/bread.js and working links
+// there individual routes
+
 function Default(html) {
     return (
         <html>
