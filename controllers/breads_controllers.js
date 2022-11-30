@@ -17,7 +17,10 @@ breads.get('/', (req, res) => {
 
 // SHOW (displays individual breads based on array index in models/breads.js)
 breads.get('/:arrayIndex', (req, res) => {
-    res.send(Bread[req.params.arrayIndex])
+    res.render('Show', {
+        bread: Bread[req.params.arrayIndex]
+    })
+    // res.send(Bread[req.params.arrayIndex])
 })
 
 module.exports = breads
