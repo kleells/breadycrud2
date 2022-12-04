@@ -17,10 +17,16 @@ breads.get('/', (req, res) => {
 
 // SHOW (displays individual breads based on array index in models/breads.js)
 breads.get('/:arrayIndex', (req, res) => {
-    res.render('Show', {
-        bread: Bread[req.params.arrayIndex]
+    // 404 (if user trys to search for a bread in
+    // array that does not exist ex localhost:3003/breads/43)
+    if (Bread[req.params.arrayIndex]) {
+        res.render('Show', {
+        bread:Bread[req.params.arrayIndex]
+        })
+    } else {
+        res.send('404 - NO BREAD EXISTS')
+    }
     })
-    // res.send(Bread[req.params.arrayIndex])
-})
+
 
 module.exports = breads
