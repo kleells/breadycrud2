@@ -28,4 +28,17 @@ breads.get('/:arrayIndex', (req, res) => {
     }
     })
 
+// CREATE (create a new route that will take form data and add it to db)
+breads.post('/', (req, res) => {
+    console.log(req.body)
+    if(req.body.hasGluten === 'on') {
+        req.body.hasGluten === 'true'
+    } else {
+        req.body.hasGlutten === 'false'
+    }
+    Bread.push(req.body)
+    res.redirect('/breads')
+    })
+
+
 module.exports = breads
