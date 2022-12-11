@@ -10,6 +10,9 @@ function Index({breads, title}) // breads is the object in controllers/bread_con
     return (
         <Default title={title}>
             <h2>Our Breads</h2>
+            <div className="newButton">
+                <a href="/breads/new"><button>Add a new bread</button></a>
+            </div>
             {/* <p>I have {breads[0].name} bread!</p> */}
             {
                 // below loops over the models/breads.js array and turns it to an

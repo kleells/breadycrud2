@@ -26,7 +26,7 @@ app.use('/breads', breadsController)
 
 // 404 Page (when user types in nonexisting url)
   app.get('*', (req, res) => {
-    res.send('404 - NO ROUTE EXISTS')
+    res.render('404')
   })
 
 // LISTEN
