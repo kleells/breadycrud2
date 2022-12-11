@@ -1,5 +1,7 @@
 // DEPENDENCIES
 const express = require('express')
+// methodOverride used to override POST requests (i.e. delete breads)
+const methodOverride = require('method-override')
 
 // CONFIGURATION
 require('dotenv').config()
@@ -7,6 +9,7 @@ const PORT = process.env.PORT
 const app = express()
 
 // MIDDLEWARE (should be installed above routes)
+app.use(methodOverride('_method'))
 // Here we are setting up which view engine should be used and
 // requiring JSX so we can utilize it to build our views
 // app.set('views', __dirname + '/views')
