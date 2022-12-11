@@ -45,7 +45,7 @@ const React = require('react')
                 <body>
                     <div className="wrapper">
                         <header>
-                            <h1><a href="/breads">BreadCRUD</a></h1>
+                            <h1><a href="/breads" className="header">Welcome to BreadCRUD</a></h1>
                         </header>
                         <div className="container">
                             {html.children}

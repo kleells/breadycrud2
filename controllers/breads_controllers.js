@@ -24,7 +24,7 @@ breads.get('/:arrayIndex', (req, res) => {
         bread:Bread[req.params.arrayIndex]
         })
     } else {
-        res.send('404 - NO BREAD EXISTS')
+        res.render('404')
     }
     })
 

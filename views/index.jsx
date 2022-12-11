@@ -9,7 +9,7 @@ function Index({breads, title}) // breads is the object in controllers/bread_con
 {
     return (
         <Default title={title}>
-            <h2>Index Page</h2>
+            <h2>Our Breads</h2>
             {/* <p>I have {breads[0].name} bread!</p> */}
             {
                 // below loops over the models/breads.js array and turns it to an
@@ -21,8 +21,8 @@ function Index({breads, title}) // breads is the object in controllers/bread_con
                             the `${}` ensures the breads will be linked to their 
                             proper array index */}
                             <a href={`/breads/${index}`}>
-                            {bread.name} 
-                            {/* above adds the bread names to the route */}
+                                {bread.name} 
+                                {/* above adds the bread names to the route */}
                             </a>
                         </li>
                     )

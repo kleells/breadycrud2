@@ -5,6 +5,7 @@ function Show ({bread}) {
     // console.log(bread.name)
         return (
             <Default>
+                <h2>Bread Information</h2>
                 <h3>{bread.name}</h3>
                 {/* below is a ternary operator (if/else are not available in JSX) about gluten info */}
                 <p>
