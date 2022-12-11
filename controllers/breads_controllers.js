@@ -9,7 +9,7 @@ breads.get('/', (req, res) => {
         // 2nd is optional and an object. Here it is breads: Bread
         {
             breads: Bread,
-            title: 'Index Page'
+            title: 'Bread Index'
         }
     )
     //res.send(Bread)

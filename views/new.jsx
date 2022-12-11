@@ -3,7 +3,7 @@ const Default = require('./layouts/Default')
 
 function New () {
     return (
-        <Default>
+        <Default title="Add a bread">
             <h2>Add a new bread</h2>
                 <form action="/breads" method="POST" >
                     <label htmlFor="name">Name</label>

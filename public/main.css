@@ -12,6 +12,19 @@ img {
     text-decoration: none;
 }
 
+.link {
+    text-decoration: none;
+}
+
+.breadlist {
+    list-style-type: none;
+    margin-left: 40px;
+}
+
+a:hover {
+    color: red;
+}
+
 .tagline {
     color: darkolivegreen;
 }
