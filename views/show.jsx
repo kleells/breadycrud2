@@ -6,22 +6,29 @@ function Show ({bread, index}) {
         return (
             <Default title={bread.name}>
                 <h3>{bread.name}</h3>
+                <h5>Ingredients</h5>
+                <p>{bread.ingredients}</p>
+                <br/>
+                <h5>Instructions</h5>
+                <p>{bread.instructions}</p>
+                <img src={bread.image} alt={bread.name} />
                 {/* below is a ternary operator (if/else are not available in JSX) about gluten info */}
-                <p>
-                    and it 
+                <br/>
+                <p> 
+                    *
                     {
                         bread.hasGluten 
-                        ? <span> does </span>
-                        : <span> does NOT </span>
+                        ? <span> contains </span>
+                        : <span> does not contain </span>
                     }
-                    have gluten
+                    gluten
                 </p>
-                <img src={bread.image} alt={bread.name} />
+                <br/>
                 <a href={`/breads/${index}/edit`}><button>Edit</button></a>
                 <form action={`/breads/${index}?_method=DELETE`} method="POST">
                     <input type='submit' value="DELETE"/>
                 </form>
-                <li><a href="/breads" className='link'>Go Home</a></li>
+                <a href="/breads"><button>Back to Breads</button></a>
             </Default>
         )
 }
