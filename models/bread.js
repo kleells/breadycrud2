@@ -28,7 +28,7 @@ module.exports = [
       'Mist bread with water in the first 10 minutes. ',
       'Bread should sound hollow when tapped.'
     ],
-    info : {
+    info: {
       prepTime: '30 min',
       cookTime: '40 min',
       totalTime: '70',

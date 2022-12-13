@@ -2,11 +2,15 @@
 const express = require('express')
 // methodOverride used to override POST requests (i.e. delete breads)
 const methodOverride = require('method-override')
+const mongoose = require('mongoose')
 
 // CONFIGURATION
 require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, 
+  () => { console.log('connected to mongo: ', process.env.MONGO_URI) }
+)
 
 // MIDDLEWARE (should be installed above routes)
 app.use(methodOverride('_method'))
@@ -20,7 +24,7 @@ app.use(express.static('public'))
 
 // ROUTES (landing page)
 app.get('/', (req, res) => {
-  res.send('Welcome to an Awesome App about Breads!')
+  res.send('The Breadmaker')
 })
 
 // Breads READ ROUTE (grabs breads_controller INDEX page)

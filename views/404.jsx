@@ -6,9 +6,9 @@ function NotFound () {
         <Default title="404 Error">
             <main>
                 <h2>404: PAGE NOT FOUND</h2>
-                    <h4>You seem lost...</h4>
+                    <h5>... looks like you missed a step.</h5>
                         <div>
-                            <img src="https://cdn.pixabay.com/photo/2016/11/22/21/37/compass-1850673_960_720.jpg" alt="Photo of a person holding a compass"></img> 
+                            <img src="https://cdn.pixabay.com/photo/2021/07/23/09/32/bread-6486963__340.jpg" alt="Photo of a person holding a compass"></img> 
                         </div>
                         <br></br>
                         <div>
