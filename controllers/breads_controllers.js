@@ -4,16 +4,15 @@ const Bread = require('../models/bread.js')
 
 // INDEX (grabs models/bread.js array to be used by server.js)
 breads.get('/', (req, res) => {
-    res.render('Index', 
-        // update res.render() to pass data: 1st arg is file inside of views folder (Index)
-        // 2nd is optional and an object. Here it is breads: Bread
-        {
-            breads: Bread,
-            title: 'Bread Index'
-        }
-    )
-    //res.send(Bread)
+    Bread.find()
+        .then(foundBreads => {
+            res.render('index', {
+                breads: foundBreads,
+                title: 'Index Page'
+            })
+        })
 })
+
 
 // NEW
 breads.get('/new', (req, res) => {
