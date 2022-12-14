@@ -23,7 +23,7 @@ function Index({breads, title}) // breads is the object in controllers/bread_con
                             {/* below <a></a> adds dynamic links to the route
                             the `${}` ensures the breads will be linked to their 
                             proper array index */}
-                            <a href={`/breads/${index}`} className='link'>
+                            <a href={`/breads/${bread.id}`} className='link'>
                                 {bread.name} 
                                 {/* above adds the bread names to the route */}
                             </a>
