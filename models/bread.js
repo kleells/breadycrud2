@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 // creating shorthand for the Schema constructor 
 const { Schema } = mongoose 
 
-// schema
+// schema for database
 const breadSchema = new Schema({
   name: { type: String, required: true },
   hasGluten: Boolean,

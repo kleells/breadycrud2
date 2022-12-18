@@ -2,12 +2,14 @@
 const express = require('express')
 // methodOverride used to override POST requests (i.e. delete breads)
 const methodOverride = require('method-override')
+// require mongoose after running npm i mongoose
 const mongoose = require('mongoose')
 
 // CONFIGURATION
 require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
+// connect to mongo using mongoose and add MONGO_URI... to .env
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, 
   () => { console.log('connected to mongo: ', process.env.MONGO_URI) }
 )
