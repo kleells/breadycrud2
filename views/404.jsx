@@ -3,7 +3,7 @@ const Default = require('./layouts/Default')
 
 function NotFound () {
     return (
-        <Default title="404 Error">
+        <Default title="404Error">
             <main>
                 <h2>404: PAGE NOT FOUND</h2>
                     <h5>... looks like you missed a step.</h5>
