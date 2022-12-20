@@ -18,6 +18,15 @@ function New () {
                     type="text"
                     name="image"
                     id="image"/>
+                    <label htmlFor="baker">Baker</label>
+                        <select name="baker" id="baker">
+                            <option value="Rita">Rita</option>
+                            <option value="Lucy">Lucy</option>
+                            <option value="Vinny">Vinny</option>
+                            <option value="Hugo">Hugo</option>
+                            <option value="Monty">Monty</option>
+                            <option value="Walter">Walter</option>
+                        </select>
                     <label htmlFor="hasGluten">Has Gluten?</label>
                     <input
                     type="checkbox"

@@ -7,7 +7,11 @@ const { Schema } = mongoose
 const breadSchema = new Schema({
   name: { type: String, required: true },
   hasGluten: Boolean,
-  image: { type: String, default: 'https://images.unsplash.com/photo-1556471013-0001958d2f12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHdob2xlJTIwd2hlYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'  }
+  image: { type: String, default: 'https://images.unsplash.com/photo-1556471013-0001958d2f12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHdob2xlJTIwd2hlYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'},
+  baker: {
+    type: String,
+    enum: ['Rita', 'Lucy', 'Vinny', 'Hugo','Monty', 'Walter']
+  }
 })
 
 // model

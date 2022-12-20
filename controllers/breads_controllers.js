@@ -52,7 +52,7 @@ breads.get('/:id/edit', (req, res) => {
         })
 })
 
-// SEED
+// SEED route is /breads/data/seed (only vist this route if you need to seed a lot of data or it will duplicate)
 breads.get('/data/seed', (req, res) => {
     Bread.insertMany([
     {
