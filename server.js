@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopolo
 
 // MIDDLEWARE (should be installed above routes)
 app.use(methodOverride('_method'))
-// Here we are setting up which view engine should be used and
+// Setting up which view engine should be used and
 // requiring JSX so we can utilize it to build our views
 // app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')

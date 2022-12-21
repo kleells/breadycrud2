@@ -14,7 +14,7 @@ function Show ({bread, index}) {
                 <img src={bread.image} alt={bread.name} />
                 {/* below is a ternary operator (if/else are not available in JSX) about gluten info */}
                 <br/>
-                <p>Baked by {bread.baker}</p>
+                <p>{bread.getBakedBy()}</p>
                 <p> 
                     *
                     {
