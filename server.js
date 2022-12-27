@@ -15,6 +15,7 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopolo
 )
 
 // MIDDLEWARE (should be installed above routes)
+// app.use will grab the DEPENDENCIES from above with configuration options in ()
 app.use(methodOverride('_method'))
 // Setting up which view engine should be used and
 // requiring JSX so we can utilize it to build our views
@@ -32,6 +33,10 @@ app.get('/', (req, res) => {
 // Breads READ ROUTE (grabs breads_controller INDEX page)
 const breadsController = require('./controllers/breads_controllers.js')
 app.use('/breads', breadsController)
+
+// Bakers
+const bakersController = require('./controllers/bakers_controller.js')
+app.use('/bakers', bakersController)
 
 // 404 Page (when user types in nonexisting url)
   app.get('*', (req, res) => {
