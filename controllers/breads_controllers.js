@@ -27,7 +27,7 @@ breads.get('/new', (req, res) => {
 
 // SHOW (displays individual breads based on array index in models/breads.js)
 breads.get('/:id', (req, res) => {
-    // // 404 (if user trys to search for a bread in
+    // // 404 (if user tries to search for a bread in
     // // array that does not exist ex localhost:3003/breads/43)
     // if (Bread[req.params.arrayIndex]) {
     //     res.render('Show', {
@@ -38,9 +38,11 @@ breads.get('/:id', (req, res) => {
     //     res.render('404')
     // }
     Bread.findById(req.params.id)
+        .populate('baker') 
+        // populate references the baker_controller "collection"
         .then(foundBread => {
-            const bakedBy = foundBread.getBakedBy()
-            console.log(bakedBy)
+            // const bakedBy = foundBread.getBakedBy()
+            // console.log(bakedBy)
             res.render('show', {
                 bread: foundBread
             })
@@ -52,11 +54,15 @@ breads.get('/:id', (req, res) => {
 
 // EDIT
 breads.get('/:id/edit', (req, res) => {
-    Bread.findById(req.params.id) 
-        .then(foundBread => { 
-            res.render('edit', {
-                bread: foundBread 
-            })
+    Baker.find()
+        .then(foundBakers => {
+            Bread.findById(req.params.id) 
+                .then(foundBread => { 
+                    res.render('edit', {
+                        bread: foundBread,
+                        bakers: foundBakers
+                    })
+                })
         })
 })
 

@@ -16,7 +16,7 @@ const breadSchema = new Schema({
 
 // helper methods (instance helper method)
 breadSchema.methods.getBakedBy = function(){
-  return `This ${this.name} recipe was shared by ${this.baker}`
+  return `This ${this.name} recipe was shared by ${this.baker.name}, who has been contributing to The Breadmaker since ${this.baker.startDate.getFullYear()}.`
 }
 
 
