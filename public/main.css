@@ -21,6 +21,11 @@ img {
     margin-left: 40px;
 }
 
+.bakerlist {
+    list-style-type: none;
+    margin-left: 40px;
+}
+
 a:hover {
     color: red;
 }

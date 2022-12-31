@@ -5,11 +5,11 @@ const Default = require('./layouts/Default')
 
 
 // creating bread index view
-function Index({breads, title}) // breads is the object in controllers/bread_controller INDEX route
+function Index({breads, bakers, title}) // breads is the object in controllers/bread_controller INDEX route
 {
     return (
         <Default title={title}>
-            <h2>Our Breads</h2>
+            <h3>Breads</h3>
             <div className="newButton">
                 <a href="/breads/new"><button>Add a new bread</button></a>
             </div>
@@ -31,6 +31,21 @@ function Index({breads, title}) // breads is the object in controllers/bread_con
                     )
                 })
             }
+            <br></br>
+            <h3>Contributors</h3>
+            <ul>
+                {
+                    bakers.map((baker) => {
+                        return (
+                            <li key={baker.id} className='bakerlist'>
+                                <a href={`/bakers/${baker.id}`} className='link'>
+                                    {baker.name}
+                                </a>
+                            </li>
+                        )
+                    })
+                }
+            </ul>
         </Default>
     )
 }

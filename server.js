@@ -27,7 +27,7 @@ app.use(express.static('public'))
 
 // ROUTES (landing page)
 app.get('/', (req, res) => {
-  res.send('The Breadmaker')
+  res.send('The Bread Makers')
 })
 
 // Breads READ ROUTE (grabs breads_controller INDEX page)

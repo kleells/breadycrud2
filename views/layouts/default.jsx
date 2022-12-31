@@ -22,8 +22,8 @@ const React = require('react')
                 <body>
                     <div className="wrapper">
                         <header>
-                            <h1><a href="/breads" className="header">The Breadmaker</a></h1>
-                            <h5 className='tagline'>Your source for information on breads of the world</h5>
+                            <h1><a href="/breads" className="header">The Bread Makers</a></h1>
+                            <h5 className='tagline'>A place to share our love of bread making</h5>
                         </header>
                         <div className="container">
                             {html.children}
