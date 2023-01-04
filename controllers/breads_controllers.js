@@ -4,18 +4,18 @@ const breads = express.Router()
 const Bread = require('../models/bread.js')
 
 // INDEX (grabs models/bread.js array to be used by server.js)
-breads.get('/', (req, res) => {
-    Baker.find()
-        .then(foundBakers => {
-            Bread.find()
-                .then(foundBreads => {
-                    res.render('index', {
-                        breads: foundBreads,
-                        bakers: foundBakers,
-                        title: 'Index Page'
-                    })
-                })
-        })
+breads.get('/', async (req, res) => {
+    // Baker.find()
+    //     .then(foundBakers => {
+    //         Bread.find()
+    //             .then(foundBreads => {
+    const foundBakers = await Baker.find().lean()
+    const foundBreads = await Bread.find().limit(10).lean()
+    res.render('index', {
+        breads: foundBreads,
+        bakers: foundBakers,
+        title: 'Index Page'
+    })
 })
 
 // NEW
