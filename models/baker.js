@@ -8,7 +8,7 @@ const bakerSchema = new Schema ({
     name: {
         type: String,
         required: true,
-        enum: ['Rita', 'Lucy', 'Vinny', 'Simon', 'Stanley', 'Charlie']
+        enum: ['Rita', 'Lucy', 'Vinny', 'Hugo', 'Monty', 'Walter']
     },
     startDate: {
         type: Date,
